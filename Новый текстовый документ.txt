@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int a = 0, b = 0, c = 0;
+    printf("Input a, b, c \n");
+    int rez = scanf("%d%d%d", &a, &b, &c);
+    int tmp;
+    if (rez == 3)
+    {
+        if (a > b)
+        {
+            tmp = a;
+            a = b;
+            b = tmp;
+        }
+        if (b > c)
+        {
+            tmp = b;
+            b = c;
+            c = tmp;
+        }
+        printf("%d%d%d", a, b, c);
+    }
+    else
+    {
+        printf("WRONG DATA");
+    }
+
+    return 0;
+}
